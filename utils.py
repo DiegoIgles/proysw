@@ -12,9 +12,13 @@ def load_images(image_folder, img_size=(224, 224)):
             img = img / 255.0 
             images.append(img)
 
-            if "objeto" in filename:
-                labels.append(1) 
+            if "no_objeto" in filename:
+                labels.append(0)
+            elif "objeto" in filename:
+                labels.append(1)
             else:
-                labels.append(0)  
+                print(f"Nombre de archivo desconocido: {filename}")
+                continue
+            
 
     return np.array(images), np.array(labels)

@@ -16,8 +16,11 @@ def real_time_object_recognition():
         img = np.expand_dims(img, axis=0) 
 
         prediction = model.predict(img)
+        prediction_value = prediction[0][0] 
 
-        if prediction > 0.7:  
+        print(f"Predicción: {prediction_value}") 
+
+        if prediction_value > 0.7:
             label = "Objeto detectado"
             color = (0, 255, 0) 
 
