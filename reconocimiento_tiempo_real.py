@@ -20,7 +20,7 @@ def real_time_object_recognition():
 
         print(f"Predicción: {prediction_value}") 
 
-        if prediction_value > 0.7:
+        if prediction_value > 0.1:
             label = "Objeto detectado"
             color = (0, 255, 0) 
 
