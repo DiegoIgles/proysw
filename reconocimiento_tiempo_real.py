@@ -40,8 +40,15 @@ def real_time_detection():
         if prediction_value > object_threshold:
             obj_label = "Objeto detectado"
             obj_color = (0, 255, 0)  # Verde
-            # Dibujar rectángulo alrededor del objeto (ajusta las coordenadas según sea necesario)
-            cv2.rectangle(frame, (50, 50), (frame.shape[1]-50, frame.shape[0]-50), obj_color, 2)
+            
+            height, width, _ = frame.shape
+            center_x, center_y = width // 2, height // 2
+            box_size = 100 
+
+            top_left = (center_x - box_size, center_y - box_size)
+            bottom_right = (center_x + box_size, center_y + box_size)
+            
+            cv2.rectangle(frame, top_left, bottom_right, obj_color, 2)
         else:
             obj_label = "Objeto no detectado"
             obj_color = (0, 0, 255)  # Rojo

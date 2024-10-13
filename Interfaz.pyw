@@ -43,7 +43,7 @@ def abrir_dashboard():
 # Función para ejecutar el archivo de captura de imágenes y abrir CMD
 def ejecutar_archivo_captura():
     try:
-        ruta_archivo_captura = r"F:\SOFTWARE PROYECTO\proysw\capturar_imagenes.py"
+        ruta_archivo_captura = r"capturar_imagenes.py"
         
         # Ejecuta el archivo en una nueva ventana del símbolo de sistema (CMD)
         subprocess.Popen(["python", ruta_archivo_captura], creationflags=subprocess.CREATE_NEW_CONSOLE)
@@ -54,7 +54,7 @@ def ejecutar_archivo_captura():
 # Función para ejecutar el archivo de modelo y abrir CMD
 def ejecutar_archivo_modelo():
     try:
-        ruta_archivo_modelo = r"F:\SOFTWARE PROYECTO\proysw\entrenar_modelo.py"
+        ruta_archivo_modelo = r"entrenar_modelo.py"
         
         # Ejecuta el archivo en una nueva ventana del símbolo de sistema (CMD)
         subprocess.Popen(["python", ruta_archivo_modelo], creationflags=subprocess.CREATE_NEW_CONSOLE)
@@ -65,7 +65,7 @@ def ejecutar_archivo_modelo():
 # Función para ejecutar el archivo de reconocimiento de objetos y abrir CMD
 def ejecutar_archivo_reconocimiento():
     try:
-        ruta_archivo_reconocimiento = r"F:\SOFTWARE PROYECTO\proysw\reconocimiento_tiempo_real.py"  # Cambia el nombre del archivo aquí
+        ruta_archivo_reconocimiento = r"reconocimiento_tiempo_real.py"  # Cambia el nombre del archivo aquí
         
         # Ejecuta el archivo en una nueva ventana del símbolo de sistema (CMD)
         subprocess.Popen(["python", ruta_archivo_reconocimiento], creationflags=subprocess.CREATE_NEW_CONSOLE)
