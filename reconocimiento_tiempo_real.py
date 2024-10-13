@@ -17,7 +17,7 @@ def real_time_object_recognition():
 
         prediction = model.predict(img)
 
-        if prediction > 0.5:  
+        if prediction > 0.7:  
             label = "Objeto detectado"
             color = (0, 255, 0) 
 
